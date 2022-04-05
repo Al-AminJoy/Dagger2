@@ -2,7 +2,7 @@ package com.alamin.dagger2
 
 import dagger.Component
 
-@Component
+@Component(modules = [EngineModule::class])
 interface CarComponent {
     //fun getCar(): Car;
 

@@ -14,6 +14,7 @@ class Car {
     }
 
     fun startCar(){
+        engine.start()
         Log.d("CAR_INFO", " Car Is Running")
     }
 }
