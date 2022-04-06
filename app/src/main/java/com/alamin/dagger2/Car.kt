@@ -6,11 +6,11 @@ import javax.inject.Inject
 private const val TAG = "Car"
 class Car {
     lateinit var engine: Engine;
+    @Inject
     lateinit var wheels: Wheels;
     @Inject
-    constructor(engine: Engine,wheels: Wheels){
+    constructor(engine: Engine){
         this.engine = engine;
-        this.wheels = wheels;
     }
 
     @Inject
@@ -21,5 +21,6 @@ class Car {
     fun startCar(){
         engine.start()
         Log.d("CAR_INFO", " Car Is Running")
+        Log.d("CAR_INFO", wheels.toString())
     }
 }
